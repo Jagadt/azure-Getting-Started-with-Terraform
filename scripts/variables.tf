@@ -19,6 +19,15 @@ variable "prefix" {
     default = "Drupal"
 }
 
+variable "vnet_cidr" {
+    default = "192.168.0.0/16"
+}
+
+variable "subnet_cidr" {
+    default = "192.168.1.0/24"
+}
+
+
 variable "servers" {
     default = 1
     description = "The number of App servers to launch."
