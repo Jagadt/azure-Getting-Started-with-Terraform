@@ -85,7 +85,7 @@ resource "azurerm_network_interface" "DrupalonAzureVM_NIC" {
   network_security_group_id = "${azurerm_network_security_group.DrupalonAzureVM_SGs.id}"
 
   ip_configuration {
-    name 			= "${var.prefix}-configuration""
+    name 			= "${var.prefix}-configuration"
     subnet_id 			= "${azurerm_subnet.DrupalonAzureVM_SNET.id}"
     private_ip_address_allocation = "dynamic"
     public_ip_address_id	= "${azurerm_public_ip.DrupalonAzureVM_PIP.id}"
